@@ -101,10 +101,13 @@ input {
 
 #txt{
     position: absolute;
-    top: 50%;
-    width: 100%;
+    top: 40%;
+    width: 40%;
+    margin-left: 30%;
     text-align: center;
-    color:#f66d52;
+    color: #f66d52;
+    font-size: 15px;
+    line-height: 25px;
 }
 
 #progress {
