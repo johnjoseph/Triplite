@@ -1,0 +1,484 @@
+html,body,div,span,table,tr,td,ul,li,tbody,p
+{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    outline:none;
+}
+
+body {
+    background:#f0f0f0;
+    font-family:'Helvetica Neue', Helvetica, Arial;
+    color:#313131;
+    font-size:62.5%;
+    line-height:1;
+}
+
+br{
+    display:block;
+    line-height:2.2em;
+}
+
+p{
+    display:block;
+    font-family:1.35em;
+    line-height:1.5em;
+}
+
+b{
+    color:#fff;
+    font-weight:bold;
+}
+::selection {
+    background:#afdcec;
+}
+
+::-moz-selection {
+    background:#afdcec;
+}
+
+::-webkit-selection {
+    background:#afdcec;
+}
+
+::-webkit-input-placeholder {
+    color:#ccc;
+    font-style:italic;
+}
+
+:-moz-placeholder {
+    color:#ccc;
+    font-style:italic;
+}
+
+::-moz-placeholder {
+    color:#ccc;
+    font-style:italic;
+}
+
+:-ms-input-placeholder {
+    color:#ccc;
+    font-style:italic;
+}
+
+ol,ul { list-style:none; }
+
+input {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust:100%;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    outline:none;
+}
+
+#header{
+    padding:10px;
+    background:#f66d52;
+}
+
+#header span{
+    font-size:18px;
+    margin:10px 20px;
+    color:#fff;
+}
+
+#default,#loader{
+    width: 1000px;
+    height:400px;
+    background:#fff;
+    margin: 50px auto 0 auto;
+}
+
+#default{
+    background-image:url('../img/canvas.png');
+    background-size:1000px 400px;
+    position:relative;
+}
+
+#txt{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color:#f66d52;
+}
+
+#progress {
+    position:relative;
+    width:300px;
+    height:25px;
+    margin:auto;
+    top: 50%;
+    border: 1px solid #c8c8c8;
+    border-radius: 3px;    
+}
+
+#progress .progress-bar {
+    background:#f66d52;
+    height:inherit;
+    width:0;
+    display:inline-block;
+}
+
+#searchtab {
+    display: block;
+    width:1000px;
+    margin:50px auto 0 auto;
+    background:#fff;
+    -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 2px 0px;
+    -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 2px 0px;
+    box-shadow:rgba(0,0,0,0.1) 0px 1px 2px 0px;
+}
+
+.searchtab_row {
+    display:block;
+    width:80%;
+    margin:auto;
+    padding:25px 20px;
+    overflow:hidden;
+}
+
+#submit {
+    display:block;
+    float:right;
+    font-weight:bold;
+    font-size:15px;
+    padding:12.5px 0;
+    width:50%;
+    background-color:#f66d52;
+    text-align:center;
+    color:#fff;
+}
+
+#submit:hover {
+    background-color:#fa8771;
+    cursor:pointer;
+}
+
+#datepicker {
+    float:left;
+    width:30%;
+}
+
+#hop_searchfield {
+    clear:both;
+    float:none;
+    margin:1% auto;
+}
+
+.searchfield {
+    display:block;
+    width:44%;
+    float:left;
+    margin:1%;
+    text-align:center;
+}
+
+.searchfield form{
+    display:block;
+    background:#eeefed;
+    padding:0;
+    margin:0;
+    border-radius:3px;
+}
+
+.searchfield form .place_autocomplete {
+    width:100%;
+    height:40px;
+    padding:0 10px 0 10px;
+    background-color: #fff;
+    border:1px solid #c8c8c8;
+    border-radius:3px;
+    color:#aeaeae;
+    font-weight:normal;
+    font-size:1.5em;
+    -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    transition:all 0.2s linear;
+}
+
+.searchfield form .place_autocomplete:focus{
+    color:#858585;
+}
+
+.arrow {
+    display:block;
+    width:6%;
+    height:40px;
+    margin:1%;
+    float:left;
+    text-align:center;
+}
+
+#date {
+    height:40px;
+    margin:1%;
+    width:100%;
+    font-size:15px;
+    color:#aeaeae;
+}
+
+#suggestion_text{
+    color:#fff;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+    border-right:1px solid #fff;
+}
+
+#loader tr{
+    width:100%;
+}
+
+#loader td{
+    width:33%;
+}
+
+#loader td{
+    padding:30px;
+}
+
+#suggestion_saved,#suggestion_price{
+    color:#fff;
+}
+
+#searchresults {
+    width:1000px;
+    margin:50px auto 0 auto;
+}
+
+#searchresults table {
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0 10px;
+}
+
+#searchresults #oh, #searchresults #hd {
+    width:49%;
+    margin:.5%;
+    float:left;
+}
+
+#searchresults table tr td {
+    width:20%;
+    padding:10px;
+    font-size:13px;
+    text-align:center;
+    background:#fff;
+    -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 0px 0px;
+    -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 0px 0px;
+    box-shadow:rgba(0,0,0,0.1) 0px 1px 0px 0px;
+}
+
+#searchresults table tr td p{
+    height:18px;
+    overflow:hidden;
+}
+
+#searchresults table tr td .dt{
+    color:#888;
+    font-size:12px;
+}
+
+#searchresults table tr td .flight_span {
+    width:40px;
+    height:40px;
+    display:inline-block;
+    background-image: url('../img/transporticons.png');
+    background-size: 600px 40px;
+    background-position: -560px 0;
+    -webkit-background-size:600px 40px;
+    -moz-background-size:600px 40px;
+}
+
+.oh_result, .hd_result {
+    position:relative;
+    top:0px;
+    z-index:-1;
+}
+
+#oh_result_wrapper_parent, #hd_result_wrapper_parent {
+    overflow:hidden;
+    height:450px;
+}
+
+#oh_result_up,#hd_result_up{
+    background-image:url('../img/arrow_up.png');
+}
+
+#oh_result_down,#hd_result_down{
+    background-image:url('../img/arrow_down.png');    
+}
+
+#oh_hd_inner {
+    overflow:hidden;
+    width:85%;
+    margin:auto;
+}
+
+#oh_hd {
+    overflow:hidden;
+    position:relative;
+}
+
+#bar {
+    position:absolute;
+    top:75px;
+    width:100%;
+    z-index:2;
+}
+
+.tick{
+    background-size:100px 50px;
+    background-position:50px 0;
+    background-image:url('../img/ticksprite.png');
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;    
+}
+
+#loader p{
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+#popup{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    background: #f66d52;
+}
+
+.selector {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#searchresults .table_results tr td:last-child,.selected {
+    color:#f66d52;
+}
+
+.selected{
+    border-top:2px solid #f66d52;
+}
+
+#searchresults table tr td .flight_name {
+    font-size: 12px;
+}
+
+#searchresults table tr td .flight_IndiGo {
+    background-position: 0 0;
+}
+
+#searchresults table tr td .flight_Vistara {
+    background-position: -40px 0;
+}
+
+#searchresults table tr td .flight_Spicejet{
+    background-position: -80px 0;
+}
+
+#searchresults table tr td .flight_GoAir {
+    background-position:-120px 0;
+}
+
+#searchresults table tr td .flight_GoBusiness {
+    background-position:-120px 0;
+}
+
+#searchresults table tr td .flight_AirIndia {
+    background-position:-160px 0;
+}
+
+#searchresults table tr td .flight_JetAirways {
+    background-position:-200px 0;
+}
+
+#searchresults table tr td .flight_AirAsia {
+    background-position:-240px 0;
+}
+#searchresults table tr td .flight_AirCosta{
+    background-position:-280px 0;
+}
+#searchresults table tr td .flight_TruJet {
+    background-position:-480px 0;
+}
+
+.hide {
+    display:none;
+}
+
+.showAll, .hideAll, .selector td, .arrows {
+    cursor:pointer;
+}
+
+.flatbtn {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    display:inline-block;
+    outline:0px;
+    border:0px;
+    color:#f3faef;
+    text-decoration:none;
+    background-color:#6bb642;
+    border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    font-size:1.2em;
+    font-weight:bold;
+    padding:12px 22px 12px 22px;
+    line-height:normal;
+    text-align:center;
+    vertical-align:middle;
+    cursor:pointer;
+    text-transform:uppercase;
+    text-shadow:0 1px 0 rgba(0,0,0,0.3);
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    -webkit-box-shadow: 0 1px 0 rgba(15,15,15,0.3);
+    -moz-box-shadow: 0 1px 0 rgba(15,15,15,0.3);
+    box-shadow: 0 1px 0 rgba(15,15,15,0.3);
+}
+
+.flatbtn:hover {
+    color:#fff;
+    background-color:#73c437;
+}
+
+.flatbtn:active {
+    -webkit-box-shadow:inset 0 1px 5px rgba(0,0,0,0.1);
+    -mox-box-shadow:inset 0 1px 5px rgba(0,0,0,0.1);
+    box-shadow:inset 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.autocomplete-suggestions {
+    border:1px solid #999;
+    background:#fff;
+    cursor:default;
+    overflow:auto;
+}
+
+.autocomplete-suggestion {
+    padding:10px 5px;
+    font-size:1.2em;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.autocomplete-selected {
+    background:#f0f0f0;
+}
+
+.autocomplete-suggestions strong {
+    font-weight:normal;
+    color:#3399ff;
+}
+
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Triplite</title>
+<base href="/">
+<link rel="stylesheet" type="text/css" media="all" href="./css/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="js/triplite.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <div id="header"><span style="font-weight: 200;"><b>Trip</b>lite</span></div>
+    <div id="popup" class="hide">Please enter valid search criteria</div>
+    <div id="searchtab">
+        <div class="searchtab_row">
+            <div class="searchfield">
+                <form><input class="place_autocomplete" type="text" name="origin" id="origin_autocomplete" placeholder="origin"/></form>
+            </div>
+            <div id="arrow1" class="arrow"></div>
+            <div class="searchfield">
+                <form><input class="place_autocomplete" type="text" name="destination" id="destination_autocomplete" placeholder="destination"/></form>
+            </div>            
+        </div>
+        <div class="searchfield" id="hop_searchfield">
+            <form><input class="place_autocomplete" type="text" name="hop" id="hop_autocomplete" placeholder="hop"/></form>
+        </div>                    
+        <div class="searchtab_row">
+            <div id="datepicker">
+                <form><input id="date" type="date"/></form>
+            </div>
+            <div id="submit">SEARCH</div>
+        </div>
+    </div>
+    <div id="default" class="main">
+    <div id="txt"></div>
+    </div>
+    <div id="loader" class="main hide">
+    <table style="width:100%">
+        <tr><td colspan="3"><div id="progress"><div class="progress-bar"></div></div></td></tr>
+        <tr><td id="tick_flights_od"><span class="tick"></span><p></p></td><td id="tick_flights_oh"><span class="tick"></span><p></p></td><td id="tick_flights_hd"><span class="tick"></span><p></p></td></tr>
+        <tr><td id="tick_buses_od"><span class="tick"></span><p></p></td><td id="tick_buses_oh"><span class="tick"></span><p></p></td><td id="tick_buses_hd"><span class="tick"></span><p></p></td></tr>
+    </table>
+    </div>
+    <div id="searchresults" class="main hide">
+        <div id="od">
+            <table style="border-spacing:0px;" class="selector">
+                <tr><td id="flights_od_selector" class="selected">Flights</td><td id="buses_od_selector">Buses</td></tr>
+            </table>
+            <table style="border-spacing:0px;" id="od_result_header"></table>
+            <table class="table_results" id="flights_od_results"></table>
+            <table class="table_results hide" id="buses_od_results"></table>
+        </div>
+        <div id="oh_hd">
+            <div id="bar">
+                <table style="table-layout:fixed;width:100%;border-spacing:0px;">
+                    <tr>
+                        <td style="background:#f66d52;padding:0;width:1%;">
+                            <ul>
+                                <li class="arrows" id="oh_result_up" style="height:45px;"></li>
+                                <li class="arrows" id="oh_result_down" style="height:45px;"></li>
+                            </ul>
+                        </td>
+                        <td style="background:none;padding:35px;border:10px solid #f66d52;"></td>
+                        <td style="background:#f66d52;padding:0px;width:1%;">
+                            <ul>
+                                <li class="arrows" id="hd_result_up" style="height:45px;"></li>
+                                <li class="arrows" id="hd_result_down" style="height:45px;"></li>
+                            </ul>                            
+                        </td>
+                    </tr>
+                    <tr><td id="suggestion_content" style="background:#f66d52;padding:0;" colspan="3">
+                        <table>
+                            <tr><td id="suggestion_text" style="background:#f66d52;-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;padding:2px;" rowspan="2"></td><td id="suggestion_price" style="background:#f66d52;-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;padding:2px;"></td></tr>
+                            <tr><td id="suggestion_saved" style="background:#f66d52;-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;padding:2px;"></td></tr>
+                        </table>
+                    </td></tr>
+                </table>
+            </div>
+            <div id="oh_hd_inner">
+                <div id="oh">
+                    <table style="border-spacing:0px;" class="selector">
+                        <tr>
+                            <td id="flights_oh_selector" class="selected">Flights</td>
+                            <td id="buses_oh_selector">Buses</td>
+                        </tr>
+                    </table>
+                    <table style="border-spacing:0px;" id="oh_result_header"></table>
+                    <div class="result_wrapper_parent" id="oh_result_wrapper_parent">
+                        <div id="oh_result_wrapper">
+                            <table class="table_results oh_result" id="flights_oh_results"></table>
+                            <table class="table_results oh_result hide" id="buses_oh_results"></table>
+                        </div>
+                    </div>
+                </div>
+                <div id="hd">
+                    <table style="border-spacing:0px;" class="selector">
+                        <tr>
+                            <td id="flights_hd_selector">Flights</td>
+                            <td id="buses_hd_selector" class="selected">Buses</td>
+                        </tr>
+                    </table>
+                    <table style="border-spacing:0px;" id="hd_result_header"></table>
+                    <div class="result_wrapper_parent" id="hd_result_wrapper_parent">
+                        <div id="hd_result_wrapper">
+                            <table class="table_results hd_result hide" id="flights_hd_results"></table>
+                            <table class="table_results hd_result" id="buses_hd_results"></table>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
